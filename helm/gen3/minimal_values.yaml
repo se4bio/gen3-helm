@@ -1,0 +1,46 @@
+global:
+    hostname: mygen3dev.se4.bio
+    dev: true
+
+portal:
+    resources:
+        requests:
+            cpu: "0.5"
+            memory: 1Gi
+        limits:
+            cpu: "1"
+            memory: 2Gi
+    image: 
+        repository: quay.io/cdis/data-portal
+        tag: latest
+        # Tip: for mac/Mx you can try using 
+        # repository: quay.io/cdis/data-portal-prebuilt
+        # tag: dev
+        # ...as this can speed up portal init!
+
+fence:
+    FENCE_CONFIG:
+        MOCK_AUTH: true
+
+# DISABLE some (for now) unnecessary services:
+
+audit:
+  enabled: false
+
+guppy:
+  enabled: false
+
+hatchery:
+  enabled: false
+
+manifestservice:
+  enabled: false
+
+metadata:
+  enabled: false
+
+peregrine:
+  enabled: true
+
+wts:
+  enabled: false
