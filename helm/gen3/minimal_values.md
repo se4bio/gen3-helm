@@ -25,10 +25,6 @@ helm upgrade --install gen3 gen3/gen3 -f minimal_values.yaml
 ```
 kubectl get pods | grep deployment
 ```
-- Wait ~40min for the portal to build. Progress can be followed with:
-```
-kubectl logs -f deploy/portal-deployment
-```
 
 - Add mapping to /etc/hosts:
 ```

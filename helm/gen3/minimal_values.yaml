@@ -2,21 +2,16 @@ global:
     hostname: mygen3dev.se4.bio
     dev: true
 
-portal:
-    resources:
-        requests:
-            cpu: "0.5"
-            memory: 1Gi
-        limits:
-            cpu: "1"
-            memory: 2Gi
-    image: 
-        repository: quay.io/cdis/data-portal
-        tag: latest
-        # Tip: for mac/Mx you can try using 
-        # repository: quay.io/cdis/data-portal-prebuilt
-        # tag: dev
-        # ...as this can speed up portal init!
+# -- (map) Configurations for frontend-framework chart.
+frontend-framework:
+  # -- (bool) Whether to deploy the frontend-framework subchart.
+  enabled: false
+  # -- (map) Docker image information.
+  image:
+    # -- (string) The Docker image repository for the frontend-framework.
+    repository: "quay.io/cdis/commons-frontend-app"
+    # -- (string) Overrides the image tag whose default is the chart appVersion.
+    tag: "main"
 
 fence:
     FENCE_CONFIG:
@@ -38,9 +33,6 @@ manifestservice:
 
 metadata:
   enabled: false
-
-peregrine:
-  enabled: true
 
 wts:
   enabled: false
