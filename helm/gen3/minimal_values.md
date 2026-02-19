@@ -6,12 +6,12 @@
 - Start docker
 - Start minikube: `minikube start`
 
-Clone our gen3-helm fork and checkout `minimal_setup` branch:
+Clone our gen3-helm fork and checkout `minimal_setup_v2` branch:
 
 ```
 git clone git@github.com:se4bio/gen3-helm.git
 git fetch --all
-git checkout minimal_setup
+git checkout minimal_setup_v2
 ```
 
 ## Installation
@@ -61,6 +61,7 @@ and/or navigate to http://mygen3dev.se4.bio:8080
 - Check status: `helm status gen3`
 - View pods and ports: `kubectl get svc`
 
+:information_source: remember to add namespace, e.g. `-n gen3-ns`.
 
 # Extra: integrating Fence with IDP
 
