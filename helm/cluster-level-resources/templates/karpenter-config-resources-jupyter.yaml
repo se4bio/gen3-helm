@@ -32,7 +32,7 @@ spec:
 
   securityGroupSelectorTerms:
   - tags:
-      karpenter.sh/discovery: {{ index .Values "karpenter-crds" "selectorTag" }}-jupyter
+      karpenter.sh/discovery: {{ index .Values "karpenter-crds" "selectorTag" }}
 
   subnetSelectorTerms:
   - tags:
