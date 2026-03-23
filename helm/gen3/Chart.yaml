@@ -84,7 +84,7 @@ dependencies:
     repository: "file://../guppy"
     condition: guppy.enabled
   - name: hatchery
-    version: 0.1.64
+    version: 0.1.65
     repository: "file://../hatchery"
     condition: hatchery.enabled
   - name: indexd
